@@ -11,10 +11,28 @@ export const metadata: Metadata = {
   description: "Pedro H.F Zoz's Blog",
 };
 
+function TitleBar() {
+  return (<div className={styles.titleBar}><h1 className={styles.title}>Pedro H.F. Zoz</h1></div>);
+}
+
+function Navbar() {
+  return (<nav className={styles.navbar}>
+    <Link href={"/"} className={styles.navButton}>Home</Link>
+    <Link href={"/portfolio"} className={styles.navButton}>Portfolio</Link>
+    <Link href={"/about"} className={styles.navButton}>About</Link>
+  </nav>);
+}
+
 function Header() {
   return (<header className={styles.header}>
-    <Link href={"/"} className={""}>Home</Link>
+    <TitleBar />
+    <Navbar />
   </header>);
+}
+
+function Footer() {
+  return (<footer className={styles.footer}>
+  </footer>);
 }
 
 export default function RootLayout({

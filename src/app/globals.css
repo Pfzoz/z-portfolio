@@ -4,3 +4,8 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("/fonts/Roboto-Thin.ttf") format("truetype");
+}

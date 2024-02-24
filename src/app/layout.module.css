@@ -1,10 +1,41 @@
 .header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    flex-grow: 1;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    height: 10rem;
-    background-color: #f0f0f0;
-    padding: 0 20px;
-  }
+    height: 17vh;
+}
+
+.titleBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0.77;
+    width: 100%;
+    background-color: rgb(78, 178, 145);
+    border: 0.1rem solid rgba(49, 130, 103, 0.661);
+}
+
+.title {
+    font-size: 3rem;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+    font-family: "Roboto Thin";
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 0.23;
+    gap: 4rem;
+    background-color: rgb(243, 250, 248);
+}
+
+.navButton {
+    text-decoration: none;
+    color: black;
+}
