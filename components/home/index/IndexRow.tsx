@@ -11,7 +11,17 @@ export default function IndexRow() {
       <div
         id="indexRow"
         className={`${styles.default} ${open ? styles.open : ""}`}
-      ></div>
+      >
+        <h3 className={styles.index}
+          onClick={() =>
+            document
+              .getElementById("welcomeTitle")
+              ?.scrollIntoView({ behavior: "smooth", block: "nearest" } )
+          }
+        >
+          ○ Welcome
+        </h3>
+      </div>
       <button className={styles.openButton} onClick={() => setOpen(!open)} />
     </>
   );
