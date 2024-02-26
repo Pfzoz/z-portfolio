@@ -1,0 +1,23 @@
+.default {
+    position: fixed;
+}
+
+.index {
+  margin-left: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.index:hover {
+    color: rgba(0, 0, 0, 0.665);
+}
+
+.index:active {
+    color: black;
+}
+
+.currentIndex {
+  outline: 1px solid black;
+  outline-offset: 6px;
+}

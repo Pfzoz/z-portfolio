@@ -2,25 +2,17 @@
 
 import { useState } from "react";
 import styles from "./index.module.css";
+import Indexes from "./indexes/Indexes";
 
 export default function IndexRow() {
   const [open, setOpen] = useState(false);
-
   return (
     <>
       <div
         id="indexRow"
         className={`${styles.default} ${open ? styles.open : ""}`}
       >
-        <h3 className={styles.index}
-          onClick={() =>
-            document
-              .getElementById("welcomeTitle")
-              ?.scrollIntoView({ behavior: "smooth", block: "nearest" } )
-          }
-        >
-          ○ Welcome
-        </h3>
+        <Indexes/>
       </div>
       <button className={styles.openButton} onClick={() => setOpen(!open)} />
     </>
