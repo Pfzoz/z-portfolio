@@ -1,4 +1,13 @@
 .default {
+    display: flex;
+    flex-direction: column;
     margin-top: 1em;
     font-size: 2em;
+    height: fit-content;
+    align-items: center;
+}
+
+.paragraphText {
+    font-size: 1.5rem;
+    width: 80%;
 }

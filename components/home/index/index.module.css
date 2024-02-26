@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    width: 20%;
     background-color: whitesmoke;
 }
 
@@ -23,7 +24,7 @@
 
     .open {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         left: 0;
     }
 
