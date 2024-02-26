@@ -1,0 +1,12 @@
+.default {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+  .default {
+    display: none;
+  }
+}
