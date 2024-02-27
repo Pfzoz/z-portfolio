@@ -3,7 +3,7 @@
   flex-direction: column;
   flex-grow: 1;
   width: 20%;
-  background-color: whitesmoke;
+  background-color: rgb(231, 237, 214);
 }
 
 @media only screen and (max-width: 768px) {

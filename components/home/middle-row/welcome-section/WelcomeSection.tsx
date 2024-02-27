@@ -1,15 +1,16 @@
 import styles from "./welcome-section.module.css";
 import contents from "./contents";
+import { Paragraph, SubTitle } from "../../../text/contents";
 export default function WelcomeSection() {
   return (
     <section id="welcomeSection" className={styles.default}>
-      <h2 id="welcomeTitle">Welcome to my blog!</h2>
-      <p className={styles.paragraphText}>
-        {contents.welcomeSection.description}
-      </p>
-      <p className={styles.paragraphText}>
-        Sorry but this site is under construction at the moment :/
-      </p>
+      <SubTitle id="welcomeTitle">Welcome to my blog!</SubTitle>
+      <Paragraph>
+        {contents.welcomeSection.p1}
+      </Paragraph>
+      <Paragraph>
+        {contents.welcomeSection.p2}
+      </Paragraph>
     </section>
   );
 }
