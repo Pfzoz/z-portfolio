@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Paragraph = styled.p`
     font-size: 1.5rem;
     width: 80%;
-    background-color: rgb(245, 252, 243);
+    background-color: rgb(221, 235, 231, 0.35);
     font-family: "Roboto Thin";
 `
 export const SubTitle = styled.h2`

@@ -1,3 +1,8 @@
+import styles from './page.module.css';
+import { PortfolioTitle } from '../../../components/portfolio/Components';
+
 export default function Portfolio() {
-    return <>This page is under construction! ;/</>;
+    return <main className={styles.default}>
+        <PortfolioTitle/>
+    </main>;
 }

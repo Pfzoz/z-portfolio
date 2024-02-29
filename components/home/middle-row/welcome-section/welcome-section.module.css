@@ -5,6 +5,7 @@
     font-size: 2em;
     height: fit-content;
     align-items: center;
+    transition: ease-in-out 0.5s;
 }
 
 .paragraphText {

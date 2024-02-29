@@ -5,7 +5,7 @@ const contents = {
       "Hello, my name is Pedro Henrique Ferreira Zoz, and this is my personal blog. \
       I am a computer science student at Universidade Estadual do Oeste do Paraná, Paraná, Brazil. \
       I have always been fascinated by software and application development in general, as I am \
-      someone that loves creating, from machine learning models to web applications.",
+      someone that loves creating, from machine learning models to web applications, and many others.",
     p2: "Be sure to check out this website for my personal projects and updates!"
   },
 };

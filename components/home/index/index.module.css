@@ -3,7 +3,7 @@
     flex-direction: column;
     flex-grow: 1;
     width: 20%;
-    background-color: rgb(231, 237, 214);
+    background-color: rgba(209, 255, 103, 0.18);
 }
 
 .openButton {

@@ -44,12 +44,16 @@ export default function Indexes() {
     document.body.addEventListener("scroll", () => {
       manageIndexes();
     });
+    const indexes = document.getElementsByClassName(styles.index);
+    for (let i = 0; i < indexes.length; i++) {
+      indexes[i].classList.toggle(styles.indexOff, false);
+    }
   }, []);
   return (
     <div className={styles.default}>
       <h3
         id="welcomeIndex"
-        className={styles.index}
+        className={`${styles.index} ${styles.indexOff}`}
         onClick={() => indexOnClick("welcomeSection")}
       >
         ○ Welcome

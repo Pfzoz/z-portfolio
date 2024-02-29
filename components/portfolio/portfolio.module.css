@@ -1,0 +1,46 @@
+.title {
+  font-size: 4.5em;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 5.5em;
+  margin-top: 0.9em;
+  margin-bottom: 0.15em;
+  font-family: "Roboto Thin";
+  font-weight: normal;
+  transition: ease-in-out 0.5s;
+}
+
+.titleOff {
+  opacity: 10%;
+  position: relative;
+  margin-left: 0;
+}
+
+.titleUnderlineContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: fit-content;
+}
+
+.titleUnderline {
+  width: 65em;
+  height: 0.2em;
+  background-color: rgba(123, 131, 102, 0.7);
+  align-self: flex-start;
+  transition: ease-out 1.01s;
+}
+
+.titleUnderlineFade {
+  flex-grow: 1;
+  height: 0.2em;
+  background-color: rgba(123, 131, 102, 0.369);
+  align-self: flex-start;
+  transition: ease-out 1s;
+}
+
+.titleUnderlineOff {
+  width: 0em;
+  opacity: 70%;
+  flex-grow: 0;
+}
