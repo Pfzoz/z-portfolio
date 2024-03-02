@@ -10,12 +10,12 @@ export const MUDiv = styled.div`
   height: 1rem;
 `;
 
-export const MU = styled.span<{ width: string; color: string; active?: boolean}>`
+export const MU = styled.span<{ width: string; color: string; $active?: string}>`
   display: block;
   height: 0.22rem;
   width: 0;
   align-self: flex-start;
   background-color: ${(props) => props.color};
   transition: ease-in-out 0.8s;
-  ${(props) => props.active && `width: ${props.width};`}
+  ${(props) => props.$active && props.$active === "true" && `width: ${props.width};`}
 `;

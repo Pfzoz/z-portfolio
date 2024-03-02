@@ -28,7 +28,7 @@ const DBtn = styled.div`
   }
 `;
 
-const ContrastCircle = styled.div<{active?: boolean}>`
+const ContrastCircle = styled.div<{$active?: string}>`
   border-radius: 100%;
   width: 0%;
   height: 0%;
@@ -37,7 +37,7 @@ const ContrastCircle = styled.div<{active?: boolean}>`
   position: absolute;
   pointer-events: none;
 
-  ${props => props.active && `
+  ${props => props.$active && props.$active === "true" &&`
     width: 600%;
     height: 600%;
     opacity: 50%;

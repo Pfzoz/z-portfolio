@@ -9,7 +9,7 @@ import { ContrastCircle, ContrastIconStyled, DBtn } from "./contents";
 
 export default function Layout({ children }) {
   const [theme, setTheme] = useState(LightTheme);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState("false");
   useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       setTheme(DarkTheme);
@@ -20,8 +20,8 @@ export default function Layout({ children }) {
     <ThemeProvider theme={theme}>
       <Header />
       <DBtn
-        onMouseEnter={() => setActive(true)}
-        onMouseLeave={() => setActive(false)}
+        onMouseEnter={() => setActive("true")}
+        onMouseLeave={() => setActive("false")}
         onClick={() => {
           if (theme.mode === "light") {
             setTheme(DarkTheme);
@@ -33,7 +33,7 @@ export default function Layout({ children }) {
         }}
       >
         <ContrastIconStyled />
-        <ContrastCircle active={active}/>
+        <ContrastCircle $active={active}/>
       </DBtn>
       {children}
       <Footer />
