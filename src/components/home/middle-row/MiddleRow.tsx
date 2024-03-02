@@ -1,5 +1,4 @@
-import { Paragraph, SubTitle } from "@/components/text/contents";
-import { MidRow } from "./contents";
+import { MidRow, Paragraph, SubTitle } from "./contents";
 
 export default function MiddleRow() {
   return (

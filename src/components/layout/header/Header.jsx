@@ -1,12 +1,17 @@
-import Navbar from "./navbar/Navbar";
-import TitleBar from "./title-bar/TitleBar";
-import styles from "./header.module.css"
+import { HeaderDiv, HeaderTitle, NavbarDiv, NavbarLink, TitleDiv } from "./contents";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <TitleBar />
-      <Navbar />
-    </header>
+    <HeaderDiv>
+      <TitleDiv>
+        <HeaderTitle>Pedro H. F. Zoz</HeaderTitle>
+      </TitleDiv>
+      <NavbarDiv>
+        <NavbarLink href={"/"}>Home</NavbarLink>
+        <NavbarLink href={"/portfolio"}>Portfolio</NavbarLink>
+        <NavbarLink href={"/stack"}>Stack</NavbarLink>
+        <NavbarLink href={"/about"}>About</NavbarLink>
+      </NavbarDiv>
+    </HeaderDiv>
   );
 }

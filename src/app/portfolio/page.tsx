@@ -1,8 +1,9 @@
-import styles from './page.module.css';
-import { PortfolioTitle } from '../../components/portfolio/Components';
+import MovingUnderline from '@/components/reusable/moving-underline/MovingUnderline';
+import { PortfolioMain, PortfolioTitle } from './contents';
 
 export default function Portfolio() {
-    return <main className={styles.default}>
-        <PortfolioTitle/>
-    </main>;
+    return <PortfolioMain>
+        <PortfolioTitle>Portfolio</PortfolioTitle>
+        <MovingUnderline />
+    </PortfolioMain>
 }

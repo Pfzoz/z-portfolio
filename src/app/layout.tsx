@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import styles from "./layout.module.css";
-import RootComponent from "../components/page/RootComponent";
+import Layout from "@/components/layout/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body style={{ visibility: "hidden" }} className={inter.className}>
-        <RootComponent children={children} />
+        <Layout children={children} />
       </body>
     </html>
   );

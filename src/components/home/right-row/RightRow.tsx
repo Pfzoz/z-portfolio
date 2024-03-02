@@ -1,5 +1,5 @@
-import styles from "./right-row.module.css";
+import { RightRowDiv } from "./contents";
 
 export default function RightRow() {
-  return <div className={styles.default}></div>;
+  return <RightRowDiv></RightRowDiv>;
 }
