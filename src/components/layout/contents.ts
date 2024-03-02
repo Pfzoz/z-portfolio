@@ -26,6 +26,8 @@ const DBtn = styled.div`
     color: gray;
     transition: ease-in-out 0.05s;
   }
+
+  font-size: 4.2rem;
 `;
 
 const ContrastCircle = styled.div<{$active?: string}>`
@@ -48,8 +50,7 @@ const ContrastCircle = styled.div<{$active?: string}>`
 `
 
 const ContrastIconStyled = styled(ContrastIcon)`
-  width: 4rem;
-  height: 4rem;
+  font-size: large;
 `;
 
 export { DBtn, ContrastCircle, ContrastIconStyled };

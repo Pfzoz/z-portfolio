@@ -5,7 +5,7 @@ const LightTheme = {
   third: "rgb(96, 110, 100, 0.1)",
   fourth: "rgb(96, 110, 79, 0.85)",
   text: "#000000",
-  title: "#000000",
+  title: "rgba(40, 50, 15, 0.9)",
   contrast: "rgba(167, 180, 147, 0.2)",
   smallText: "#000000",
   bigText: "#000000",

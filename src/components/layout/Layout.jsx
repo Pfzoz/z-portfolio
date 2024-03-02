@@ -10,12 +10,17 @@ import { ContrastCircle, ContrastIconStyled, DBtn } from "./contents";
 export default function Layout({ children }) {
   const [theme, setTheme] = useState(LightTheme);
   const [active, setActive] = useState("false");
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
     if (localStorage.getItem("theme") === "dark") {
       setTheme(DarkTheme);
     }
     document.body.style.visibility = "";
+    setMounted(true);
   }, []);
+
+  if (!mounted) return <></>;
+
   return (
     <ThemeProvider theme={theme}>
       <Header />
@@ -32,8 +37,8 @@ export default function Layout({ children }) {
           }
         }}
       >
-        <ContrastIconStyled />
-        <ContrastCircle $active={active}/>
+        <ContrastIconStyled  fontSize="inherit"/>
+        <ContrastCircle $active={active} />
       </DBtn>
       {children}
       <Footer />

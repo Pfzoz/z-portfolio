@@ -22,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body style={{ visibility: "hidden" }} className={inter.className}>
-        <Layout children={children} />
+        <Layout>
+          {children}
+        </Layout>
       </body>
     </html>
   );
