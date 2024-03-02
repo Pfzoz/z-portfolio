@@ -4,6 +4,7 @@
     flex-grow: 1;
     width: 20%;
     background-color: rgba(209, 255, 103, 0.18);
+    transition: ease-in-out 0.5s;
 }
 
 .openButton {

@@ -48,9 +48,13 @@ export default function Indexes() {
     for (let i = 0; i < indexes.length; i++) {
       indexes[i].classList.toggle(styles.indexOff, false);
     }
+    document.getElementById("indexTitle")?.classList.toggle(styles.indexOff, false);
   }, []);
   return (
     <div className={styles.default}>
+      <h2 id="indexTitle" className={`${styles.indexTitle} ${styles.indexOff}`}>
+        Index
+      </h2>
       <h3
         id="welcomeIndex"
         className={`${styles.index} ${styles.indexOff}`}

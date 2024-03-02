@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 0.4;
+  font-size: 1.2em;
+  gap: 2em;
+  background-color: rgba(98, 203, 145, 0.277);
+}
+
+.navButton {
+  text-decoration: none;
+  color: black;
+}
+
+.navButton:hover {
+  color: rgba(0, 0, 0, 0.629);
+}
+
+.navButton:active {
+  color: black;
+}

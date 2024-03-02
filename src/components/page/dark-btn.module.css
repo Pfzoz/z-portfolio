@@ -1,0 +1,29 @@
+.icon {
+  font-size: 4em;
+}
+
+.constractCircle {
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: ease-in-out 0.2s;
+  align-self: center;
+  position: absolute;
+}
+
+.constrastCircleOn {
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+}
+
+.default:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.default:active {
+  color: rgba(127, 127, 127, 0.5);
+}
