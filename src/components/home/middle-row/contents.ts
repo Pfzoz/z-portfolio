@@ -13,7 +13,6 @@ export const MidRow = styled.div`
   font-family: "Roboto Thin";
   align-items: center;
   gap: 1.3em;
-  padding: 4em 0;
 
   .textOff {
     opacity: 0%;
@@ -38,9 +37,14 @@ export const Paragraph = styled.p<{width?: string}>`
 export const SubTitle = styled.h2<{width?: string}>`
     font-size: 3rem;
     margin-bottom: 0.8em;
+    margin-top: 2em;
     height: fit-content;
     width: ${props => props.width ? props.width : "fit-content"};
     align-content: center;
     color: ${props => props.theme.text};
     font-family: "Roboto Thin";
+`
+
+export const NextLogo = styled.img`
+  filter: drop-shadow(5px 5px 8px #000F00);
 `

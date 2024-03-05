@@ -2,7 +2,7 @@ import { HeaderDiv, HeaderTitle, NavbarDiv, NavbarLink, TitleDiv } from "./conte
 
 export default function Header() {
   return (
-    <HeaderDiv>
+    <HeaderDiv id="header">
       <TitleDiv>
         <HeaderTitle>Pedro H. F. Zoz</HeaderTitle>
       </TitleDiv>

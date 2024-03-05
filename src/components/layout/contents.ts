@@ -51,6 +51,7 @@ const ContrastCircle = styled.div<{$active?: string}>`
 
 const ContrastIconStyled = styled(ContrastIcon)`
   font-size: large;
+  filter: ${props => props.theme.mode === "light" ? "drop-shadow(1px 1px 1px black)" : "drop-shadow(1px 1px 1px gray)"}
 `;
 
 export { DBtn, ContrastCircle, ContrastIconStyled };

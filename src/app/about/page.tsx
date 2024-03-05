@@ -1,7 +1,11 @@
-import { AboutTitle } from "../../components/about/Components";
+import MovingUnderline from "@/components/reusable/MovingUnderline";
+import { AboutMain, AboutTitle } from "./contents";
 
 export default function About() {
-    return <main>
-        <AboutTitle/>
-    </main>
+  return (
+    <AboutMain>
+      <AboutTitle>About</AboutTitle>
+      <MovingUnderline widthFactor={40} justifyContent={"right"} />
+    </AboutMain>
+  );
 }

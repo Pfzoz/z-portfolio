@@ -5,7 +5,8 @@ export default function IndexRow() {
     <IndexDiv>
       <IndexFixDiv>
         <IndexTitle>Index</IndexTitle>
-        <IndexEntry>Welcome</IndexEntry>
+        <IndexEntry href="#welcomeSection">Bem Vindo</IndexEntry>
+        <IndexEntry href="#projectSection">Projeto Atual</IndexEntry>
       </IndexFixDiv>
     </IndexDiv>
   );

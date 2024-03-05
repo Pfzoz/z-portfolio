@@ -1,9 +1,9 @@
-import MovingUnderline from '@/components/reusable/moving-underline/MovingUnderline';
+import MovingUnderline from '@/components/reusable/MovingUnderline';
 import { PortfolioMain, PortfolioTitle } from './contents';
 
 export default function Portfolio() {
     return <PortfolioMain>
         <PortfolioTitle>Portfolio</PortfolioTitle>
-        <MovingUnderline />
+        <MovingUnderline widthFactor={60} justifyContent='left'/>
     </PortfolioMain>
 }

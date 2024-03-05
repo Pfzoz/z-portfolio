@@ -1,6 +1,6 @@
 "use client";
 
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const IndexDiv = styled.div`
   width: 20%;
@@ -11,15 +11,22 @@ export const IndexDiv = styled.div`
   align-items: center;
 `;
 
-export const IndexFixDiv = styled.div`
+export const IndexFixDiv = styled.div<{$active?: string}>`
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: relative;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 4em 0;
   gap: 1em;
+
+  ${props => props.$active && props.$active === "true" && css`
+    top: 0;
+    position: fixed;
+  `}
+
 `;
 
 export const IndexTitle = styled.h2`
@@ -29,7 +36,8 @@ export const IndexTitle = styled.h2`
   font-family: "Roboto Thin";
 `;
 
-export const IndexEntry = styled.p`
+export const IndexEntry = styled.a`
+  text-decoration: none;
   color: ${(props) => props.theme.text};
   font-size: 1.75rem;
   font-family: "Roboto Thin";
