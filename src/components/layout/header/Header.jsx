@@ -1,4 +1,13 @@
-import { HeaderDiv, HeaderTitle, NavbarDiv, NavbarLink, TitleDiv } from "./contents";
+"use client";
+
+import { useEffect } from "react";
+import {
+  HeaderDiv,
+  HeaderTitle,
+  NavbarDiv,
+  NavbarLink,
+  TitleDiv,
+} from "./contents";
 
 export default function Header() {
   return (

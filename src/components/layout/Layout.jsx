@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import { ThemeProvider } from "styled-components";
-import { DarkTheme, LightTheme } from "../page/themes";
+import { DarkTheme, LightTheme } from "../../themes";
 import { ContrastCircle, ContrastIconStyled, DBtn } from "./contents";
 
 export default function Layout({ children }) {

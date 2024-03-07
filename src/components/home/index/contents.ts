@@ -11,22 +11,23 @@ export const IndexDiv = styled.div`
   align-items: center;
 `;
 
-export const IndexFixDiv = styled.div<{$active?: string}>`
-  width: 100%;
+export const IndexFixDiv = styled.div<{ $active?: string }>`
+  width: 20vw;
   height: 100%;
-  position: relative;
-  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 4em 0;
+
   gap: 1em;
 
-  ${props => props.$active && props.$active === "true" && css`
-    top: 0;
-    position: fixed;
-  `}
-
+  ${(props) =>
+    props.$active &&
+    props.$active === "true" &&
+    css`
+      top: 0;
+      position: fixed;
+    `}
 `;
 
 export const IndexTitle = styled.h2`
@@ -36,7 +37,7 @@ export const IndexTitle = styled.h2`
   font-family: "Roboto Thin";
 `;
 
-export const IndexEntry = styled.a`
+export const IndexEntry = styled.a<{ $hook?: string }>`
   text-decoration: none;
   color: ${(props) => props.theme.text};
   font-size: 1.75rem;
@@ -51,5 +52,4 @@ export const IndexEntry = styled.a`
   &:active {
     color: ${(props) => props.theme.text};
   }
-
 `;

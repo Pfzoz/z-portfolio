@@ -26,7 +26,7 @@ export const HeaderTitle = styled.h1`
   color: ${(props) => props.theme.title};
   font-size: 3.5rem;
   font-family: "Roboto Thin";
-  text-shadow: 0.1rem 0.2rem 0.2rem ${props => props.theme.mode === "light" ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 0.9)"};
+  text-shadow: 0.08rem 0.09rem 0.01rem ${props => props.theme.mode === "light" ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 1)"};
 `;
 
 export const NavbarDiv = styled.nav`
