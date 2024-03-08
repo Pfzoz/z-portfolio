@@ -11,16 +11,16 @@ export const IndexDiv = styled.div`
   align-items: center;
 `;
 
-export const IndexFixDiv = styled.div<{ $active?: string }>`
+export const IndexFixDiv = styled.div<{ $active?: string; $mounted?: string }>`
   width: 20vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 4em 0;
-
   gap: 1em;
-
+  transition: ease-in-out 0.7s;
+  ${props => props.$mounted === "true" ? "transform: translateX(0%);" : "transform: translateX(-100%);"}
   ${(props) =>
     props.$active &&
     props.$active === "true" &&
@@ -30,7 +30,7 @@ export const IndexFixDiv = styled.div<{ $active?: string }>`
     `}
 `;
 
-export const IndexTitle = styled.h2`
+export const IndexTitle = styled.h2<{$mounted?:string }>`
   color: ${(props) => props.theme.text};
   font-size: 3rem;
   margin-bottom: 1em;

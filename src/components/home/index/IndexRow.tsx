@@ -5,6 +5,7 @@ import { IndexDiv, IndexEntry, IndexFixDiv, IndexTitle } from "./contents";
 
 export default function IndexRow() {
   const [active, setActive] = useState("false");
+  const [mounted, setMounted] = useState("false");
   useEffect(() => {
     document.body.addEventListener("scroll", () => {
       const header = document.getElementById("header");
@@ -19,9 +20,13 @@ export default function IndexRow() {
     });
   });
 
+  useEffect(() => {
+    setMounted("true");
+  }, []);
+
   return (
     <IndexDiv>
-      <IndexFixDiv  $active={active}>
+      <IndexFixDiv $active={active} $mounted={mounted}>
         <IndexTitle>Index</IndexTitle>
 
         <IndexEntry
@@ -41,6 +46,15 @@ export default function IndexRow() {
           }}
         >
           Projeto Atual
+        </IndexEntry>
+        <IndexEntry
+          onClick={() => {
+            document
+              .getElementById("newsSection")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Novidades
         </IndexEntry>
       </IndexFixDiv>
     </IndexDiv>

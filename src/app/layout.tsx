@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import styles from "./layout.module.css";
 import Layout from "@/components/layout/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 function Footer() {
-  return <footer className={styles.footer}></footer>;
+  return <footer></footer>;
 }
 
 export default function RootLayout({

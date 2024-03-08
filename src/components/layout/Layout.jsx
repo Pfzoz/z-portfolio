@@ -5,7 +5,7 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import { ThemeProvider } from "styled-components";
 import { DarkTheme, LightTheme } from "../../themes";
-import { ContrastCircle, ContrastIconStyled, DBtn } from "./contents";
+import { ContrastCircle, DBtn, DarkIcon } from "./contents";
 
 export default function Layout({ children }) {
   const [theme, setTheme] = useState(LightTheme);
@@ -37,7 +37,7 @@ export default function Layout({ children }) {
           }
         }}
       >
-        <ContrastIconStyled  fontSize="inherit"/>
+        <DarkIcon width={75} height={75} src="/images/dark-icon.png" fontSize="inherit"/>
         <ContrastCircle $active={active} />
       </DBtn>
       {children}

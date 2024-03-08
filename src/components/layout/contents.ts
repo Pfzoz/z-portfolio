@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import styled from "styled-components";
-import ContrastIcon from "@mui/icons-material/Contrast";
 
 const DBtn = styled.div`
   display: flex;
@@ -30,28 +30,32 @@ const DBtn = styled.div`
   font-size: 4.2rem;
 `;
 
-const ContrastCircle = styled.div<{$active?: string}>`
+const ContrastCircle = styled.div<{ $active?: string }>`
   border-radius: 100%;
   width: 0%;
   height: 0%;
-  background-color: ${(props) => (props.theme.mode === "light" ? "black" : "white")};
+  background-color: ${(props) =>
+    props.theme.mode === "light" ? "black" : "white"};
   opacity: 0%;
   position: absolute;
   pointer-events: none;
 
-  ${props => props.$active && props.$active === "true" &&`
+  ${(props) =>
+    props.$active &&
+    props.$active === "true" &&
+    `
     width: 600%;
     height: 600%;
     opacity: 50%;
     transition: ease-in-out 0.2s;
-  `}
-
-  /* z-index: -1; */
-`
-
-const ContrastIconStyled = styled(ContrastIcon)`
-  font-size: large;
-  filter: ${props => props.theme.mode === "light" ? "drop-shadow(1px 1px 1px black)" : "drop-shadow(2px 2px 0px gray)"}
+  `}/* z-index: -1; */
 `;
 
-export { DBtn, ContrastCircle, ContrastIconStyled };
+const DarkIcon = styled(Image)`
+  filter: ${(props) =>
+    props.theme.mode === "light"
+      ? "drop-shadow(1px 1px 1px black)"
+      : "invert(1) drop-shadow(2px 2px 0px gray)"};
+`;
+
+export { DBtn, ContrastCircle, DarkIcon };

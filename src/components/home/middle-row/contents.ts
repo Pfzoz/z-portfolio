@@ -47,6 +47,7 @@ export const SubTitle = styled.h2<{ width?: string }>`
 `;
 
 export const NextLogo = styled.img`
+margin: 1.5em 0;
   ${(props) =>
     props.theme.mode === "dark"
       ? "filter: invert(1) drop-shadow(0.1rem 0.1rem 0.2rem #ffffff)"

@@ -32,7 +32,7 @@ export default function MiddleRow() {
         Router, que permite organizar diferentes rotas em diretórios específicos
         do projeto.
       </Paragraph>
-      <SubTitle id="feedSection">Feed</SubTitle>
+      <SubTitle id="newsSection">Novidades</SubTitle>
     </MidRow>
   );
 }

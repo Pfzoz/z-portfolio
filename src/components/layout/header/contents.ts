@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 
 export const HeaderDiv = styled.div`
   display: flex;
@@ -10,12 +11,14 @@ export const HeaderDiv = styled.div`
   height: 20%;
   align-items: center;
   justify-content: center;
+  box-shadow: ${props => props.theme.mode === "light" ? "0 0.2rem 0.1rem black" : "0 0.2rem 0.1rem gray"};
 `;
 
 export const TitleDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 80%;
   background-color: ${(props) => props.theme.fourth};
@@ -26,7 +29,10 @@ export const HeaderTitle = styled.h1`
   color: ${(props) => props.theme.title};
   font-size: 3.5rem;
   font-family: "Roboto Thin";
+  width: fit-content;
+  justify-self: center;
   text-shadow: 0.08rem 0.09rem 0.01rem ${props => props.theme.mode === "light" ? "rgba(255, 255, 255, 0.3)" : "rgba(0, 0, 0, 1)"};
+  grid-column: 2;
 `;
 
 export const NavbarDiv = styled.nav`
@@ -38,7 +44,6 @@ export const NavbarDiv = styled.nav`
   justify-content: center;
   gap: 2em;
   background-color: ${(props) => props.theme.third};
-  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.9);
 `;
 
 export const NavbarLink = styled(Link)`
@@ -62,3 +67,7 @@ export const NavbarLink = styled(Link)`
     color: ${(props) => props.theme.text};
   }
 `;
+
+export const GitHubIcon = styled(Image)`
+  grid-column: 1;
+`
