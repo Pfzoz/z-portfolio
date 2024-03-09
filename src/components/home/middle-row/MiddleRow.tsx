@@ -32,7 +32,7 @@ export default function MiddleRow() {
       <SubTitle id="projectSection">Projeto Atual</SubTitle>
       <Paragraph width="80%">
         Atualmente estou trabalhando... neste blog! Usando a framework NextJS e
-        outras tecnologias como o Material UI e Styled Components estou criando
+        outras tecnologias como o Styled Components estou criando
         esse website para expor meus projetos.
       </Paragraph>
       <NextLogo src="/images/next-js-logo.png" />

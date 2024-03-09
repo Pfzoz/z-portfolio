@@ -35,6 +35,7 @@ export const Paragraph = styled.p<{ width?: string }>`
   font-family: "Roboto Thin";
   align-content: center;
 `;
+
 export const SubTitle = styled.h2<{ width?: string }>`
   font-size: 3rem;
   margin-bottom: 0.8em;
@@ -47,7 +48,7 @@ export const SubTitle = styled.h2<{ width?: string }>`
 `;
 
 export const NextLogo = styled.img`
-margin: 1.5em 0;
+  margin: 1.5em 0;
   ${(props) =>
     props.theme.mode === "dark"
       ? "filter: invert(1) drop-shadow(0.1rem 0.1rem 0.2rem #ffffff)"
@@ -61,18 +62,18 @@ export const NewsContainer = styled.ul`
   height: 100%;
   align-items: center;
   justify-content: center;
-`
+`;
 
-export const NewsHeadline = styled.li<{width?: string}>`
+export const NewsHeadline = styled.li<{ width?: string }>`
   font-size: 1.35rem;
   font-weight: bold;
   margin-bottom: 0.8em;
   margin-top: 2em;
   text-decoration: underline;
-  background-color: ${props => props.theme.contrast};
+  background-color: ${(props) => props.theme.contrast};
   text-align: left;
   height: fit-content;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
   align-content: center;
   color: ${(props) => props.theme.text};
   font-family: "Roboto Thin";
@@ -85,5 +86,4 @@ export const NewsHeadline = styled.li<{width?: string}>`
   &:active {
     color: ${(props) => props.theme.text};
   }
-
 `;
