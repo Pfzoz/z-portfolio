@@ -52,7 +52,7 @@ export const SubTitle = styled.h3`
 export const CodeDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
   padding: 1em;
   min-height: 80%;
   background-color: black;
@@ -62,7 +62,7 @@ export const CodeDiv = styled.div`
   align-items: start;
   align-self: flex-start;
   margin-left: 2em;
-  border: 1px solid ${(props) => props.theme.third};
+  border: 5px solid ${(props) => props.theme.fourth};
 `;
 
 export const CodeText = styled.p<{ $active?: string }>`
@@ -74,7 +74,7 @@ export const CodeText = styled.p<{ $active?: string }>`
   width: fit-content;
   overflow: hidden;
   white-space: nowrap;
-  animation: ${typingBorderless} 6s steps(85, end);
+  animation: ${typingBorderless} 2.5s ease-in;
 `;
 
 
@@ -107,7 +107,7 @@ export const Paragraph = styled.p<{ width?: string }>`
   color: ${(props) => props.theme.text};
   font-family: "Roboto Thin";
   align-content: center;
-  margin: 1.5em 0;
+  margin: 1em 0;
   width: 80%;
 `;
 
