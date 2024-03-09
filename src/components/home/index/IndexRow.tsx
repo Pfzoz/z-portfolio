@@ -27,7 +27,7 @@ export default function IndexRow() {
   return (
     <IndexDiv>
       <IndexFixDiv $active={active} $mounted={mounted}>
-        <IndexTitle>Index</IndexTitle>
+        <IndexTitle>Índice</IndexTitle>
 
         <IndexEntry
           onClick={() => {

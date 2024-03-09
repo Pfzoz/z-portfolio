@@ -16,9 +16,9 @@ export default function Header() {
       </TitleDiv>
       <NavbarDiv>
         <NavbarLink href={"/"}>Home</NavbarLink>
-        <NavbarLink href={"/portfolio"}>Portfolio</NavbarLink>
+        <NavbarLink href={"/portfolio"}>Portfólio</NavbarLink>
         <NavbarLink href={"/stack"}>Stack</NavbarLink>
-        <NavbarLink href={"/about"}>About</NavbarLink>
+        <NavbarLink href={"/about"}>Sobre</NavbarLink>
       </NavbarDiv>
     </HeaderDiv>
   );

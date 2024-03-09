@@ -4,7 +4,7 @@ import { AboutMain, AboutTitle } from "./contents";
 export default function About() {
   return (
     <AboutMain>
-      <AboutTitle>About</AboutTitle>
+      <AboutTitle>Sobre</AboutTitle>
       <MovingUnderline widthFactor={40} justifyContent={"right"} />
     </AboutMain>
   );

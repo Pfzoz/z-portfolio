@@ -3,7 +3,7 @@ import { PortfolioMain, PortfolioTitle } from './contents';
 
 export default function Portfolio() {
     return <PortfolioMain>
-        <PortfolioTitle>Portfolio</PortfolioTitle>
+        <PortfolioTitle>Portfólio</PortfolioTitle>
         <MovingUnderline widthFactor={60} justifyContent='left'/>
     </PortfolioMain>
 }

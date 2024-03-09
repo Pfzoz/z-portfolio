@@ -55,10 +55,10 @@ export const NavbarLink = styled(Link)`
   font-family: "Roboto Thin";
   text-decoration: none;
   border-bottom: 1px solid transparent;
-
+  font-weight: bold;
   &:hover {
     cursor: pointer;
-    color: hsl(240, 20%, 35%);
+    color: hsl(240, 0%, 0%);
     transition: ease-in-out 0.2s;
     border-color: ${props => props.theme.fourth};
   }
