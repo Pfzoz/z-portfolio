@@ -10,4 +10,10 @@ export const RightRowDiv = styled.div`
   background-color: ${(props) => props.theme.secondary};
   font-family: "Roboto Thin";
   align-items: center;
+
+  @media screen and (max-width: 728px) {
+    display: none;
+    
+  }
+
 `;

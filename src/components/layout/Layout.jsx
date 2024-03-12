@@ -37,7 +37,7 @@ export default function Layout({ children }) {
           }
         }}
       >
-        <DarkIcon width={75} height={75} src="/images/dark-icon.png" fontSize="inherit"/>
+        <DarkIcon width={75} height={75} src="/images/dark-icon.png" alt="dark mode btn" fontSize="inherit"/>
         <ContrastCircle $active={active} />
       </DBtn>
       {children}

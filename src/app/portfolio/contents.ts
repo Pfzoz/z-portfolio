@@ -11,6 +11,8 @@ export const PortfolioMain = styled.div`
   font-family: "Roboto Thin";
   font-size: 1.5rem;
   align-items: center;
+  gap: 1em;
+  padding-bottom: 1em;
 `;
 
 export const PortfolioTitle = styled.h2`
@@ -21,4 +23,15 @@ export const PortfolioTitle = styled.h2`
   align-self: flex-start;
   font-family: "Roboto Thin";
   font-weight: normal;
+
+  @media screen and (max-width: 1000px) {
+    align-self: center;
+    margin: 0;
+    margin-top: 0.8em;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 3rem;
+  }
+
 `;

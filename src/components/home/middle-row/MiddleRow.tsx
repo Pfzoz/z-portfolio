@@ -32,10 +32,10 @@ export default function MiddleRow() {
       <SubTitle id="projectSection">Projeto Atual</SubTitle>
       <Paragraph width="80%">
         Atualmente estou trabalhando... neste blog! Usando a framework NextJS e
-        outras tecnologias como o Styled Components estou criando
-        esse website para expor meus projetos.
+        outras tecnologias como o Styled Components estou criando esse website
+        para expor meus projetos.
       </Paragraph>
-      <NextLogo src="/images/next-js-logo.png" />
+      <NextLogo src="/images/next-js-logo.png" alt="next logo" />
       <Paragraph width="80%">
         NextJS é uma framework baseada em React que possibilita uma estrutura de
         código mais organizada e flexível. Um de seus grandes pontos é seu App

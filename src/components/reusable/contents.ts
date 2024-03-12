@@ -2,14 +2,14 @@
 
 import styled from "styled-components";
 
-export const MUDiv = styled.div<{ justifyContent?: string }>`
+export const MUDiv = styled.div<{ $justifyContent?: string }>`
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   height: 1rem;
   justify-content: ${(props) =>
-    props.justifyContent ? props.justifyContent : "start"};
+    props.$justifyContent ? props.$justifyContent : "start"};
 `;
 
 export const MU = styled.span<{

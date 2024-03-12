@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const ClusterStyledTable = styled.table`
@@ -38,5 +40,34 @@ export const StructCodePre = styled.pre`
   font-size: 1.4rem;
   color: seagreen;
   background-color: black;
-  border: 5px solid ${props => props.theme.fourth};
+  border: 5px solid ${(props) => props.theme.fourth};
+
+  @media screen and (max-width: 1000px) {
+    font-size: 0.7rem;
+  }
+
+`;
+
+export const Fat16Gif = styled(Image)`
+  border: 2px solid ${(props) => props.theme.text};
+
+  @media screen and (max-width: 1000px) {
+    width: 70vw;
+    height: 70vw;
+  }
+
+`;
+
+export const Fat16Link = styled(Link)`
+  text-decoration: none underline;
+  cursor: pointer;
+  color: ${(props) => props.theme.text};
+
+  &:hover {
+    color: ${(props) => props.theme.fourth};
+  }
+
+  &:active {
+    color: ${(props) => props.theme.text};
+  }
 `;

@@ -6,10 +6,10 @@ import { MU, MUDiv } from "./contents";
 
 export default function MovingUnderline({
   widthFactor,
-  justifyContent,
+  $justifyContent,
 }: {
   widthFactor: number;
-  justifyContent: string;
+  $justifyContent: string;
 }) {
   const theme = useTheme();
   const [active, setActive] = useState("false");
@@ -18,7 +18,7 @@ export default function MovingUnderline({
   }, []);
 
   return (
-    <MUDiv justifyContent={justifyContent}>
+    <MUDiv $justifyContent={$justifyContent}>
       <MU
         width={`${widthFactor}%`}
         $themeColor={theme.fourth}

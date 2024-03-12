@@ -15,6 +15,9 @@ import {
   DefaultPostInfoP,
 } from "@/components/portfolio/contents";
 import BRStruct from "@/components/portfolio/fat16/BRStruct";
+import Image from "next/image";
+import Link from "next/link";
+import { Fat16Gif, Fat16Link } from "@/components/portfolio/fat16/contents";
 
 export default function Fat16() {
   return (
@@ -64,9 +67,9 @@ export default function Fat16() {
       </CodeDiv>
       <SubTitle>Sistemas de Arquivos</SubTitle>
       <Paragraph>
-        Sistemas de arquivos em sistemas operacionais são de suma importância e
-        são, normalmente, o plano de visão mais comum ao usuário de um sistema.
-        São eles os responsáveis por estruturar os dados armazenados na memória
+        Sistemas de arquivos em sistemas operacionais são de suma importância e,
+        normalmente, o plano de visão mais comum ao usuário de um sistema. São
+        eles os responsáveis por estruturar os dados armazenados na memória
         secundária, garantir eficiência e acesso aos arquivos.
       </Paragraph>
       <SubTitle>File Allocation Table (FAT)</SubTitle>
@@ -76,16 +79,17 @@ export default function Fat16() {
         sistema de arquivos para os sistemas operacionais MS-DOS e Windows 95.
       </Paragraph>
       <Paragraph>
-        Sua estrutura é relativamente simples, e consiste de tabelas denominadas{" "}
-        {`"tabelas de alocação de arquivos"`} ou FAT. Essas tabelas consistem de
-        entradas para regiões da memória denominadas clusters. Cada cluster é
-        composto por um ou mais setores do disco, nota-se que cada disco físico
-        possuí setores de tamanhos diferentes, mas normalmente no padrão de
-        512B. Mas o tamanho máximo de um arquivo não é somente 512B, mas sim a
-        quantidade de clusteres que ele compõe, e para descobrir os clusteres
-        basta utilizar entrada do cluster inicial na tabela FAT, onde estará o
-        segundo cluster, e assim em diante até encontrar o valor 0xFF, que dita
-        que não há mais clusters para aquele arquivo.
+        Sua estrutura é relativamente simples, consistindo de tabelas
+        denominadas {`"tabelas de alocação de arquivos"`}, ou FAT. Essas tabelas
+        consistem de entradas para regiões da memória que chamamos de clusters.
+        Cada cluster é composto por um ou mais setores do disco, nota-se que
+        cada disco físico possuí setores de tamanhos diferentes, mas normalmente
+        seguem um padrão de 512 bytes. <br /> Mas o tamanho máximo de um arquivo
+        claramente não pode ser 512 bytes, por isso ele pode compor diversos
+        clusteres, e para descobrir os clusteres basta utilizar o cluster
+        inicial como índice na tabela FAT, onde estará o segundo cluster, e
+        assim em diante até encontrar o valor 0xFF, que dita que não há mais
+        clusters para aquele arquivo.
       </Paragraph>
       <Paragraph>
         Ao reunir cada cluster de forma ordenada, basta utilizar esses valores
@@ -111,7 +115,7 @@ export default function Fat16() {
         é a estrutura de dados que sempre estará no ínicio da memória. É
         justamente por isso que o Boot Record serve de armazenamento das
         informações cruciais para o sistema. Entre elas o Boot Record dita a
-        quantidade de tabelas FAT, sendo as extras são cópias de garantia; a
+        quantidade de tabelas FAT, sendo que as extras são cópias de garantia; a
         quantidade de setores reservados que precisamos pular para alcançarmos
         as tabelas FAT, e assim por diante.
       </Paragraph>
@@ -163,6 +167,23 @@ export default function Fat16() {
         Depois disso foi só criar uma struct similar, mas para as entradas do
         Diretório Raíz, ler todas entradas, guardar as informações, e deixar o
         usuário ler o arquivo que desejasse:
+      </Paragraph>
+      <Fat16Gif
+        src="/images/fat16-running.gif"
+        width={720}
+        height={480}
+        alt="fat16 code running"
+      ></Fat16Gif>
+      <Paragraph>
+        Todo o código fonte esta disponível repositório do meu{" "}
+        <Fat16Link href={"https://github.com/Pfzoz/Fat16"}>github</Fat16Link>.
+        Também deixo as referências úteis do formato FAT16.
+      </Paragraph>
+      <Paragraph style={{ fontWeight: "bold" }}>Referências</Paragraph>
+      <Paragraph>
+        <Fat16Link href={"https://wiki.osdev.org/FAT"}>
+          https://wiki.osdev.org/FAT
+        </Fat16Link>
       </Paragraph>
     </MainContainer>
   );

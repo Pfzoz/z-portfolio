@@ -15,6 +15,7 @@ const DBtn = styled.div`
   right: 4%;
   top: 3.5%;
   color: ${(props) => (props.theme.mode === "light" ? "white" : "black")};
+  z-index: 1;
 
   &:hover {
     cursor: pointer;
@@ -28,6 +29,19 @@ const DBtn = styled.div`
   }
 
   font-size: 4.2rem;
+
+  @media screen and (max-width: 728px) {
+    top: auto;
+    bottom: 1%;
+    left: calc(80% - 2.5rem);
+    font-size: 4vw;
+    width: 5em;
+    height: 5em;
+    padding: 0.11rem;
+    background-color: ${(props) => props.theme.contrast};
+    border: 2px solid ${(props) => props.theme.fourth};
+    border-radius: 4rem;
+  }
 `;
 
 const ContrastCircle = styled.div<{ $active?: string }>`
@@ -40,18 +54,22 @@ const ContrastCircle = styled.div<{ $active?: string }>`
   position: absolute;
   pointer-events: none;
 
-  ${(props) =>
-    props.$active &&
-    props.$active === "true" &&
-    `
-    width: 600%;
-    height: 600%;
+  @media screen and (min-width: 728px) {
+    ${(props) =>
+      props.$active &&
+      props.$active === "true" &&
+      `
+    width: 40vh;
+    height: 40vh;
     opacity: 50%;
     transition: ease-in-out 0.2s;
-  `}/* z-index: -1; */
+  `}
+  }
 `;
 
 const DarkIcon = styled(Image)`
+  height: 80%;
+  width: 80%;
   filter: ${(props) =>
     props.theme.mode === "light"
       ? "drop-shadow(1px 1px 1px black)"

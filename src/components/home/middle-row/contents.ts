@@ -19,10 +19,8 @@ export const MidRow = styled.div`
     opacity: 0%;
   }
 
-  @media only screen and (max-width: 768px) {
-    .default {
-      border: none;
-    }
+  @media only screen and (max-width: 728px) {
+    border: none;
   }
 `;
 
@@ -45,10 +43,15 @@ export const SubTitle = styled.h2<{ width?: string }>`
   align-content: center;
   color: ${(props) => props.theme.text};
   font-family: "Roboto Thin";
+
+  @media only screen and (max-width: 728px) {
+    text-align: center;
+  }
 `;
 
 export const NextLogo = styled.img`
   margin: 1.5em 0;
+  z-index: 1;
   ${(props) =>
     props.theme.mode === "dark"
       ? "filter: invert(1) drop-shadow(0.1rem 0.1rem 0.2rem #ffffff)"

@@ -47,13 +47,18 @@ export const SubTitle = styled.h3`
   font-weight: normal;
   color: ${(props) => props.theme.text};
   font-family: "Roboto Thin";
-`
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+`;
 
 export const CodeDiv = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 80vw;
   padding: 1em;
+  overflow: auto;
   min-height: 80%;
   background-color: black;
   font-family: "Roboto Thin";
@@ -63,6 +68,12 @@ export const CodeDiv = styled.div`
   align-self: flex-start;
   margin-left: 2em;
   border: 5px solid ${(props) => props.theme.fourth};
+
+  @media screen and (max-width: 1000px) {
+    align-self: center;
+    margin: 0;
+    height: 50vh;
+  }
 `;
 
 export const CodeText = styled.p<{ $active?: string }>`
@@ -75,8 +86,11 @@ export const CodeText = styled.p<{ $active?: string }>`
   overflow: hidden;
   white-space: nowrap;
   animation: ${typingBorderless} 2.5s ease-in;
-`;
 
+  @media screen and (max-width: 1000px) {
+    height: fit-content;
+  }
+`;
 
 export const CodeInceptionText = styled(CodeText)`
   white-space: normal;
@@ -86,7 +100,7 @@ export const CodeInceptionText = styled(CodeText)`
   &:hover {
     overflow-y: auto;
   }
-`
+`;
 
 export const MainContainer = styled.div`
   background-color: ${(props) => props.theme.primary};
@@ -97,6 +111,10 @@ export const MainContainer = styled.div`
   flex-direction: column;
   min-height: 80%;
   width: 100%;
+
+  @media screen and (max-width: 768px) {
+    align-self: center;
+  }
 `;
 
 export const Paragraph = styled.p<{ width?: string }>`
@@ -109,6 +127,7 @@ export const Paragraph = styled.p<{ width?: string }>`
   align-content: center;
   margin: 1em 0;
   width: 80%;
+  text-align: justify;
 `;
 
 export const FatContent = `import { CodeDiv, CodeText, MainContainer, Title } from "./contents";
@@ -151,4 +170,4 @@ export default function Fat16() {
     </MainContainer>
   );
 }
-`
+`;

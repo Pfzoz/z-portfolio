@@ -1,9 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { IndexDiv, IndexEntry, IndexFixDiv, IndexTitle } from "./contents";
+import {
+  IndexButton,
+  IndexDiv,
+  IndexEntry,
+  IndexFixDiv,
+  IndexIcon,
+  IndexTitle,
+} from "./contents";
 
 export default function IndexRow() {
+  const [mobileActive, setMobileActive] = useState("false");
   const [active, setActive] = useState("false");
   const [mounted, setMounted] = useState("false");
   useEffect(() => {
@@ -25,7 +33,12 @@ export default function IndexRow() {
   }, []);
 
   return (
-    <IndexDiv>
+    <IndexDiv $mobileActive={mobileActive}>
+      <IndexButton onClick={() => {
+        setMobileActive(mobileActive === "true" ? "false" : "true");
+      }}>
+        <IndexIcon alt="index button" width={100} height={100} src={"/images/index-icon.svg"} />
+      </IndexButton>
       <IndexFixDiv $active={active} $mounted={mounted}>
         <IndexTitle>Índice</IndexTitle>
 
