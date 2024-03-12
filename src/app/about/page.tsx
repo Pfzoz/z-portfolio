@@ -5,7 +5,7 @@ export default function About() {
   return (
     <AboutMain>
       <AboutTitle>Sobre</AboutTitle>
-      <MovingUnderline widthFactor={40} justifyContent={"right"} />
+      <MovingUnderline widthFactor={40} $justifyContent={"right"} />
     </AboutMain>
   );
 }
