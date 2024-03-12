@@ -10,7 +10,7 @@ export const IndexDiv = styled.div<{ $mobileActive?: string }>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   @media screen and (max-width: 728px) {
     position: absolute;
     left: -70vw;
@@ -84,16 +84,24 @@ export const IndexButton = styled.div`
   border: 2px solid ${(props) => props.theme.fourth};
   border-radius: 4rem;
   position: fixed;
-  font-size: 4vw;
+  font-size: 3vh;
   width: 5em;
   height: 5em;
+  min-width: 95px;
+  min-height: 95px;
   padding: 0.11rem;
-  left: calc(20% - 2.5rem);
+  left: calc(20% - 2.5em);
   bottom: 1%;
   color: ${(props) => (props.theme.mode === "light" ? "white" : "black")};
   z-index: 1;
+
   @media screen and (max-width: 728px) {
     visibility: visible;
+  }
+
+  @media screen and (max-width: 340px) {
+    width: 2em;
+    height: 2em;
   }
 `;
 

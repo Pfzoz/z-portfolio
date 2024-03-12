@@ -31,17 +31,25 @@ const DBtn = styled.div`
   font-size: 4.2rem;
 
   @media screen and (max-width: 728px) {
-    top: auto;
+    top: unset;
     bottom: 1%;
-    left: calc(80% - 2.5rem);
-    font-size: 4vw;
+    font-size: 3vh;
+    right: calc(20vw - 2.5em);
     width: 5em;
     height: 5em;
+    min-width: 95px;
+    min-height: 95px;
     padding: 0.11rem;
     background-color: ${(props) => props.theme.contrast};
     border: 2px solid ${(props) => props.theme.fourth};
     border-radius: 4rem;
   }
+
+  @media screen and (max-width: 340px) {
+    width: 2em;
+    height: 2em;
+  }
+
 `;
 
 const ContrastCircle = styled.div<{ $active?: string }>`

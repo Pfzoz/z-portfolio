@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styled from "styled-components";
 
 export const MidRow = styled.div`
@@ -36,7 +37,6 @@ export const Paragraph = styled.p<{ width?: string }>`
 
 export const SubTitle = styled.h2<{ width?: string }>`
   font-size: 3rem;
-  margin-bottom: 0.8em;
   margin-top: 2em;
   height: fit-content;
   width: ${(props) => (props.width ? props.width : "fit-content")};
@@ -49,14 +49,17 @@ export const SubTitle = styled.h2<{ width?: string }>`
   }
 `;
 
-export const NextLogo = styled.img`
+export const NextLogo = styled(Image)`
   margin: 1.5em 0;
   z-index: 1;
+  @media screen and (max-width: 430px){
+    width: 70%;
+  }
   ${(props) =>
     props.theme.mode === "dark"
       ? "filter: invert(1) drop-shadow(0.1rem 0.1rem 0.2rem #ffffff)"
       : "filter: drop-shadow(0.1rem 0.1rem 0.2rem #000f00)"}
-`;
+  `;
 
 export const NewsContainer = styled.ul`
   display: flex;
@@ -71,7 +74,6 @@ export const NewsHeadline = styled.li<{ width?: string }>`
   font-size: 1.35rem;
   font-weight: bold;
   margin-bottom: 0.8em;
-  margin-top: 2em;
   text-decoration: underline;
   background-color: ${(props) => props.theme.contrast};
   text-align: left;

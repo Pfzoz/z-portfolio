@@ -35,7 +35,7 @@ export default function MiddleRow() {
         outras tecnologias como o Styled Components estou criando esse website
         para expor meus projetos.
       </Paragraph>
-      <NextLogo src="/images/next-js-logo.png" alt="next logo" />
+      <NextLogo width={"400"} height={400} src="/images/next-js-logo.png" alt="next logo" />
       <Paragraph width="80%">
         NextJS é uma framework baseada em React que possibilita uma estrutura de
         código mais organizada e flexível. Um de seus grandes pontos é seu App

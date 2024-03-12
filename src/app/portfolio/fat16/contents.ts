@@ -68,11 +68,13 @@ export const CodeDiv = styled.div`
   align-self: flex-start;
   margin-left: 2em;
   border: 5px solid ${(props) => props.theme.fourth};
+  align-self: center;
 
   @media screen and (max-width: 1000px) {
-    align-self: center;
     margin: 0;
     height: 50vh;
+    max-width: 80vw;
+    padding: 2vw;
   }
 `;
 

@@ -50,6 +50,10 @@ export const StructCodePre = styled.pre`
 
 export const Fat16Gif = styled(Image)`
   border: 2px solid ${(props) => props.theme.text};
+  width: 80vw;
+  height: 60vw;
+  max-width: 1920px;
+  max-height: 1080px;
 
   @media screen and (max-width: 1000px) {
     width: 70vw;

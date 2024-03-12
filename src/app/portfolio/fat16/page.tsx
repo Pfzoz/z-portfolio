@@ -170,8 +170,8 @@ export default function Fat16() {
       </Paragraph>
       <Fat16Gif
         src="/images/fat16-running.gif"
-        width={720}
-        height={480}
+        width={1920}
+        height={1080}
         alt="fat16 code running"
       ></Fat16Gif>
       <Paragraph>

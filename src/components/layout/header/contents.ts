@@ -8,7 +8,7 @@ export const HeaderDiv = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 20%;
+  min-height: 20%;
   align-items: center;
   justify-content: center;
   box-shadow: ${(props) =>
@@ -16,19 +16,24 @@ export const HeaderDiv = styled.div`
       ? "0 0.2rem 0.1rem black"
       : "0 0.2rem 0.1rem gray"};
 
-  @media screen and (max-width: 728px) {
+  /* @media screen and (max-width: 728px) {
     height: fit-content;
+  } */
+
+  @media screen and (max-width: 420px) {
+    
   }
+
 `;
 
 export const TitleDiv = styled.div`
-  display: grid;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 80%;
+  flex-grow: 10;
+  padding: 3em;
   background-color: ${(props) => props.theme.fourth};
   justify-content: center;
 
@@ -62,11 +67,13 @@ export const NavbarDiv = styled.nav`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 20%;
+  flex-grow: 2;
   align-items: center;
   justify-content: center;
   gap: 2em;
   background-color: ${(props) => props.theme.third};
+
+  padding: 0.5em 0;
 
   @media screen and (max-width: 728px) {
     padding: 1em 0;
