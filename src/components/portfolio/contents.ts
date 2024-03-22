@@ -106,7 +106,7 @@ export const PostsImage = styled(Image)`
   border: 2px solid ${(props) => props.theme.text};
   border-radius: 3rem;
   object-fit: cover;
-  object-position: -3vw;
+  object-position: -1.5vw;
   transition: ease-in-out 0.1s;
   grid-row: 2;
 

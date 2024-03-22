@@ -9,6 +9,8 @@ const LightTheme = {
   contrast: "#daffef",
   smallText: "#000000",
   bigText: "#000000",
+  muBegin: "#5d737e",
+  muEnd: "#64b6ac",
 };
 
 const DarkTheme = {
@@ -22,6 +24,8 @@ const DarkTheme = {
   title: "#FFFFFF",
   smallText: "#FFFFFF",
   bigText: "#000000",
+  muBegin: "#bc96e6",
+  muEnd: "#55286f",
 };
 
 export { LightTheme, DarkTheme };

@@ -21,12 +21,12 @@ export default function MovingUnderline({
     <MUDiv $justifyContent={$justifyContent}>
       <MU
         width={`${widthFactor}%`}
-        $themeColor={theme.fourth}
+        $themeColor={theme.muBegin}
         $active={active}
       />
       <MU
         width={`${100 - widthFactor}%`}
-        $themeColor={theme.secondary}
+        $themeColor={theme.muEnd}
         $active={active}
       />
     </MUDiv>
