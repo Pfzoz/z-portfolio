@@ -10,10 +10,15 @@ export const FooterDiv = styled.div`
   align-items: center;
   gap: 5em;
   justify-content: center;
-  background-color: ${props => props.theme.fourth};
+  background-color: ${(props) => props.theme.fourth};
   border-left: none;
   border-right: none;
-  box-shadow: ${props => props.theme.mode === "light" ? "0 -0.2rem 0.1rem black" : ""};
+  z-index: 10;
+  position: relative;
+  box-shadow: ${(props) =>
+    props.theme.mode === "light"
+      ? `0.1rem -0.8rem 1.8rem ${props.theme.third}`
+      : `0.1rem -0.1rem 2rem ${props.theme.third}`};
 `;
 
 export const FooterButton = styled(Link)`

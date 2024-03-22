@@ -15,7 +15,7 @@ const DBtn = styled.div`
   right: 4%;
   top: 3.5%;
   color: ${(props) => (props.theme.mode === "light" ? "white" : "black")};
-  z-index: 1;
+  z-index: 11;
 
   &:hover {
     cursor: pointer;

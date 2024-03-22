@@ -11,10 +11,12 @@ export const HeaderDiv = styled.div`
   min-height: 20%;
   align-items: center;
   justify-content: center;
+  z-index: 10;
+  position: relative;
   box-shadow: ${(props) =>
     props.theme.mode === "light"
-      ? "0 0.2rem 0.1rem black"
-      : "0 0.2rem 0.1rem gray"};
+      ? "0 0.2rem 0.8rem black"
+      : `0 0.2rem 0.8rem black`};
 
   /* @media screen and (max-width: 728px) {
     height: fit-content;

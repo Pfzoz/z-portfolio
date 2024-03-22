@@ -30,7 +30,7 @@ export const IndexDiv = styled.div<{ $mobileActive?: string }>`
 `;
 
 export const IndexFixDiv = styled.div<{ $active?: string; $mounted?: string }>`
-  width: 50vw;
+  width: 20vw;
   height: 100%;
   display: flex;
   flex-direction: column;
